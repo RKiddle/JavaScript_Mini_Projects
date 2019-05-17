@@ -5,17 +5,13 @@ function howOld(age, year){
   let yearDifference = year - theCurrentYear;
 	let newAge = age + yearDifference;
   
-  if (newAge > age){
-    return 'You will be ' + newAge + ' in the year ' + year;
-  }
-  
-  if (newAge < 0){
-    return 'The year ' +  year + ' was ' + yearDifference + ' years before you were born';
-  }
-  
-  if (age < newAge){
-    return 'You were ' + newAge + ' in the year ' +year;
-  }
+   if (newAge < 0) {
+        return `The year ${year} was ${-newAge} years before you were born`
+    } else if (newAge > age) {
+        return `You will be ${newAge} in the year ${year}`
+    } else {
+        return `You were ${newAge} in the year ${year}`
+    }
   
   
 }
