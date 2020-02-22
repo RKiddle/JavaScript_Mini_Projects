@@ -9,20 +9,26 @@ const storyWords = story.split(" ");
 
 
 //count number of words 
-console.log(storyWords.length);
+const numberWords = (storyWords.length);
 
 //remove unnecessary words
 let betterWords = storyWords.filter(x => !unnecessaryWords.includes(x));
-//count new length
+//count new number of words
 console.log(betterWords.length);
 //comparing words and overusedwords
 let intersection = betterWords.filter(x => overusedWords.includes(x));
 //counting overusedwords
 let acc = intersection.reduce((acc, val) => acc.set(val, 1 + (acc.get(val) || 0)), new Map());
 
-console.log(acc);
+
 
 const re = /[.!?]/;
 const numOfSentences = story.split(re);
-console.log(numOfSentences.length - 1);
+const numberSentences = (numOfSentences.length - 1);
 
+console.log("word count " + numberWords);
+console.log("sentence count " + numberSentences);
+console.log("overused words")
+console.log(acc);
+
+console.log(betterWords.join(' '));
