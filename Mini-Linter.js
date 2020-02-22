@@ -4,10 +4,25 @@ let overusedWords = ['really', 'very', 'basically'];
 
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
+//split story into words
 const storyWords = story.split(" ");
 
+
+//count number of words 
 console.log(storyWords.length);
 
+//remove unnecessary words
 let betterWords = storyWords.filter(x => !unnecessaryWords.includes(x));
-
+//count new length
 console.log(betterWords.length);
+//comparing words and overusedwords
+let intersection = betterWords.filter(x => overusedWords.includes(x));
+//counting overusedwords
+let acc = intersection.reduce((acc, val) => acc.set(val, 1 + (acc.get(val) || 0)), new Map());
+
+console.log(acc);
+
+const re = /[.!?]/;
+const numOfSentences = story.split(re);
+console.log(numOfSentences.length - 1);
+
