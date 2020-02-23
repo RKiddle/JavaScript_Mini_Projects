@@ -1,0 +1,10 @@
+// Write your code here:
+
+function reverseArray(array){
+  for element in array{
+    reversedArray[i] = array[array.length-i]
+    i++
+  }
+  
+  return reversedArray
+};
