@@ -1,10 +1,10 @@
-// Write your code here:
 
 function reverseArray(array){
-  for element in array{
-    reversedArray[i] = array[array.length-i]
-    i++
-  }
   
+  var reversedArray = [];
+  for (var i = array.length - 1; i >= 0; i--) {
+    reversedArray.push(array[i]);
+  }
   return reversedArray
 };
+
