@@ -33,5 +33,20 @@ function dogFactory(name, breed, weight) {
          return this._weight=newWeight}
        else {console.log('please type a number')}
        },
+      bark() {
+      return "ruff! ruff!";
+        },
+        eatTooManyTreats() {
+        return this._weight++;
+        }
     }
 }
+
+const dog1 = dogFactory('Joe', 'Pug', 27);
+
+console.log(dog1.name)
+console.log(dog1.weight)
+console.log(dog1.breed)
+dog1.eatTooManyTreats();
+console.log(dog1.weight)
+console.log(dog1.bark())
