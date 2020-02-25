@@ -1,37 +1,37 @@
-// Write your code here:
+
 function dogFactory(name, breed, weight) {
   return {
         _name: name,
         get name() {
           return this._name;
         },
-    set name(dogName){
-      if(typeof dogName==='string')
-       {return this.name=dogName
-      }else{
-        console.log('please give a valid breed!')
-    }},
+        set name(newName){
+        if(typeof newName==='string')
+         {return this._name=newName
+        }else{
+          console.log('please type a string.')}
+      },
       
         _breed: breed,
         get breed() {
           return this._breed;
         },
     
-        set breed(dogBreed){
-      if(typeof dogBreed==='string'){
-        return this.breed=dogBreed
+        set breed(newBreed){
+      if(typeof newBreed==='string'){
+        return this._breed=newBreed
       } else{
-        console.log('please give a valid breed!')
+        console.log('please type a string.')
       }},
     
         _weight: weight,
         get weight() {
           return this._weight;
         },
-          set weight(dogWeight){
-       if(typeof dogWeight=== 'number'){
-         return this.weight=dogWeight}
-       else {console.log('please giva a valid age')}
-       }
+          set weight(newWeight){
+       if(typeof newWeight === 'number'){
+         return this._weight=newWeight}
+       else {console.log('please type a number')}
+       },
     }
 }
