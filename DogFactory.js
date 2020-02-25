@@ -5,22 +5,33 @@ function dogFactory(name, breed, weight) {
         get name() {
           return this._name;
         },
-        set name(dogName) {
-          this.name = dogName;
-        },
+    set name(dogName){
+      if(typeof dogName==='string')
+       {return this.name=dogName
+      }else{
+        console.log('please give a valid breed!')
+    }},
+      
         _breed: breed,
         get breed() {
           return this._breed;
         },
-        set name(dogBreed) {
-          this.name = dogBreed;
-        },
+    
+        set breed(dogBreed){
+      if(typeof dogBreed==='string'){
+        return this.breed=dogBreed
+      } else{
+        console.log('please give a valid breed!')
+      }},
+    
         _weight: weight,
         get weight() {
           return this._weight;
         },
-        set weight(dogWeight) {
-          this.weight = dogWeight;
-        }
+          set weight(dogWeight){
+       if(typeof dogWeight=== 'number'){
+         return this.weight=dogWeight}
+       else {console.log('please giva a valid age')}
+       }
     }
 }
