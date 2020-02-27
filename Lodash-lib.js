@@ -9,6 +9,25 @@ _.clamp = function(number, lower, upper)
   return clampedValue;
 }
 
+_.inRange = function (number, start, end) {
+  if (end == undefined) {
+    end = start;
+    start = 0;
+  }
+  
+  
+  
+  if (start > end) {
+    temp = end;
+    end = start;
+    start = temp;
+    
+  }
+  
+  var isInRange = number >= start && number < end;
+  
+  return isInRange;
+}
 
 
 
